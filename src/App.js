@@ -2,14 +2,17 @@ import React from 'react';
 import './App.css';
 import pokemons from './data';
 import Pokedex from './Pokedex';
+import { Header, PokemonDetails } from './components/Index'
+import {BrowserRouter} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <h1> Pokedex </h1>
+    <BrowserRouter>
+      <Header />
       <Pokedex pokemons={pokemons} />
-    </div>
-  );
+      <PokemonDetails />
+    </BrowserRouter>
+   );
 }
 
 export default App;
